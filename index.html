@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">Portfolio.</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span><!-- je dois ajouter les boutons de navigations en mode table -->
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                        <ul class="navbar-nav ms-0 ">
+                            <li class="nav-item"><a class="nav-link active" href="#home">Accueil</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#skills">Compétences</a></li>
+                            <li class="nav-item"><a class="nav-link" href="Projets.html">Projets</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    
+    
+    </header>
+
+    <!-- Hero Section -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h6>Bonjour, je suis</h6>
+            <h1>Franck-Arsène KOUASSI</h1>
+            <h3 class="typing-effect">recherche une alternance</h3>
+            <div class="cv-btn">
+                <a href="img/CV_FranckKOUASSI.pdf" download="CV_FranckKOUASSI.pdf" class="label">Télécharger mon CV</a>
+            </div>
+        </div>
+        <div class="wave"></div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5 animate-on-scroll">Mes Compétences</h2>
+            <div id="skillsCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Item 1 - Développement Web -->
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+                            <div class="col-md-3 mb-4">
+                                <div class="skill-card animate-on-scroll">
+                                    <i class="bi bi-code-square display-4 text-primary"></i>
+                                    <h3 class="mt-3">Frontend</h3>
+                                    <p>HTML, CSS, JavaScript</p>
+                                    <div class="skill-progress">
+                                        <div class="progress-bar" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Ajoutez d'autres colonnes ici -->
+                        </div>
+                    </div>
+                    <!-- Item 2 - Design -->
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-md-3 mb-4">
+                                <div class="skill-card animate-on-scroll">
+                                    <i class="bi bi-brush display-4 text-primary"></i>
+                                    <h3 class="mt-3">Design</h3>
+                                    <p>UI/UX, Figma, Adobe XD</p>
+                                    <div class="skill-progress">
+                                        <div class="progress-bar" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Ajoutez d'autres colonnes ici -->
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#skillsCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#skillsCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h1 class="section-title">À propos de moi</h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="./img/ma_photo_profil.JPEG" alt="Franck KOUASSI" class="about-img">
+                </div>
+                <div class="col-md-6">
+                    <p>Je suis passionné par les technologies de l'information, le manangement dans l'informatique, la gestion de projet,... 
+                         l'administration des systèmes et réseaux, le développement Web</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container text-center">
+            <p>&copy; 2025 Franck-Arsène KOUASSI | Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

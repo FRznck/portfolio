@@ -1,0 +1,265 @@
+:root {
+    --text-color: #f8f9fa;
+    --highlight-color: #20c997;
+    --background-gradient: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    --primary-color: #20c997; /* Couleur principale (vert clair) */
+    --secondary-color: #1a1a1a; /* Couleur de fond sombre */
+
+}
+
+
+
+/* Structure générale */
+body {
+    background: var(--background-gradient);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Section Hero  */
+.home {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #2d2d2d 100%);
+    overflow: hidden;
+}
+
+
+
+.home-content {
+    max-width: 800px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.home-content h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 1rem 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.home-content h6 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.home-content h3.typing-effect {
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--primary-color);
+    border-right: 2px solid var(--primary-color);
+    white-space: nowrap;
+    overflow: hidden;
+    animation: blinkCursor 0.7s infinite, typing 3s steps(30, end) infinite;
+}
+
+/* Animation texte  */
+.home-content h3 {
+    font-size: 1.8rem;
+    min-height: 2em;
+    border-right: 2px solid var(--highlight-color);
+    animation: blinkCursor 0.7s infinite;
+}
+
+@keyframes blinkCursor {
+    from, to { border-color: transparent }
+    50% { border-color: var(--highlight-color) }
+}
+
+/* Animation du texte */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Section Compétences */
+.skills-section {
+    padding: 4rem 0;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.skills-section .progress {
+    height: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease;
+}
+
+.skills-section .progress:hover {
+    transform: translateY(-3px);
+}
+
+.skills-section .progress-bar {
+    background-color: var(--highlight-color);
+    transition: width 1s ease-in-out;
+}
+
+/* Section À propos */
+#about {
+    padding: 4rem 0;
+}
+
+.about-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 20px rgba(32, 201, 151, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.about-img:hover {
+    transform: scale(1.05);
+}
+
+/* Bouton Télécharger CV */
+.cv-btn a {
+    display: inline-flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: var(--highlight-color);
+    color: #fff;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: 2rem;
+}
+
+.cv-btn a:hover {
+    background: #1aa179;
+    transform: translateY(-2px);
+    box-shadow: var(--box-shadow);
+}
+
+/* Bouton Télécharger CV */
+.btn-download-cv {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: var(--box-shadow);
+}
+
+.btn-download-cv:hover {
+    background-color: #1aa179;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .about-img {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 2rem;
+    }
+    
+    .skills-section .progress {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/*
+.carousel {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .carousel-item img {
+    max-height: 500px;
+    object-fit: cover;
+  }
+
+  /* Ajouts CSS pour le carousel et animations */
+
+/* Animation de la vague */
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg"><path fill="%2320c997" fill-opacity="0.1" d="M0,160L48,170.7C96,181,192,203,288,186.7C384,171,480,117,576,117.3C672,117,768,171,864,176C960,181,1056,139,1152,128C1248,117,1344,139,1392,149.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+    animation: wave 3s linear infinite;
+}
+
+@keyframes wave {
+    0% { background-position-x: 0; }
+    100% { background-position-x: 1440px; }
+}
+
+/* Style du carousel */
+.skill-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.skill-card.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-progress {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    margin-top: 1.5rem;
+}
+
+.progress-bar {
+    height: 100%;
+    background: var(--primary-color);
+    border-radius: 2px;
+    transition: width 1s ease-in-out;
+}
+
+/* Animations au scroll */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease-out;
+}
+
+.animate-on-scroll.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+

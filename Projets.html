@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez mes projets de développement web et mes réalisations techniques">
+    <title>Mes Projets</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        .project-card {
+            transition: transform 0.3s;
+            min-height: 100%;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        .tech-badge {
+            margin: 2px;
+        }
+    </style>
+</head>
+<body class="bg-dark text-light">
+    <header class="container py-4">
+        <h1 class="text-center mb-4">Mes Réalisations</h1>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-center">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#about">À propos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#skills">Compétences</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="Projets.html">Projets</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container py-5">
+        <section class="row g-4">
+            <!-- Projet 1 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card project-card h-100 bg-secondary text-light">
+                    <img src="image_du_project" class="card-img-top" alt="Capture d'écran du projet bibliothèque">
+                    <div class="card-body">
+                        <h3 class="card-title">Gestion de bibliothèque</h3>
+                        <p class="card-text">Application web complète avec authentification utilisateur et dashboard administrateur.</p>
+                        
+                        <h4>Fonctionnalités :</h4>
+                        <ul>
+                            <li>Recherche avancée de livres</li>
+                            <li>Système d'emprunt avec rappels</li>
+                            <li>Statistiques en temps réel</li>
+                        </ul>
+
+                        <h4>Technologies :</h4>
+                        <div class="mb-3">
+                            <span class="badge bg-primary tech-badge">React</span>
+                            <span class="badge bg-success tech-badge">Node.js</span>
+                            <span class="badge bg-info tech-badge">MongoDB</span>
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <a href="https://github.com/votreprojet" class="btn btn-outline-light" target="_blank">
+                                <i class="bi bi-github"></i> Code source
+                            </a>
+                            <button class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#project1Modal">
+                                Voir les détails
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Répéter le bloc ci-dessus pour d'autres projets -->
+            
+        </section>
+
+        <!-- Modals pour les détails des projets -->
+        <div class="modal fade" id="project1Modal" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content bg-dark">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Détails du projet</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Ajouter plus de détails, images, etc. -->
+                        <p>Description détaillée du projet...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-center py-4">
+        <div class="container">
+            <p class="mb-0">&copy; 2023 Mon Portfolio. Tous droits réservés.</p>
+            <div class="mt-2">
+                <a href="#" class="text-light mx-2"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="text-light mx-2"><i class="bi bi-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
