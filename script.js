@@ -38,13 +38,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Dynamic typing effect for the hero section
+// Code concernant la section hero, les defillements de competences et le carousel
 document.addEventListener('DOMContentLoaded', () => {
     const typedTextSpan = document.querySelector(".home-content h3");
     const textArray = ["Etudiant en Informatique", "recherche une alternance"];
     const typingDelay = 100;
     const erasingDelay = 50;
-    const newTextDelay = 2000; // Delay between current and next text
+    const newTextDelay = 2000; 
     let textArrayIndex = 0;
     let charIndex = 0;
 
@@ -74,9 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (textArray.length) setTimeout(type, newTextDelay + 250);
 });
 
-/////pour l'animation du carousel
-
-// script.js
 // Animation au scroll avec Intersection Observer
 const obersvons = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
