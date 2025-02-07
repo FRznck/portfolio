@@ -7,34 +7,25 @@
     <title>Mes Projets</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <style>
-        .project-card {
-            transition: transform 0.3s;
-            min-height: 100%;
-        }
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-        .tech-badge {
-            margin: 2px;
-        }
-    </style>
+    <link rel="stylesheet" href="Projets.css">
 </head>
-<body class="bg-dark text-light">
-    <header class="container py-4">
-        <h1 class="text-center mb-4">Mes Réalisations</h1>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-center">
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
+                <p class="navbar-brand">Mes réalisations</p>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span
+                        class="navbar-toggler-icon"></span><!-- je dois ajouter les boutons de navigations en mode table -->
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
-                        <li class="nav-item"><a class="nav-link" href="index.html#about">À propos</a></li>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav ms-0 ">
+                        <li class="nav-item"><a class="nav-link" href="index.html#home">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="index.html#skills">Compétences</a></li>
                         <li class="nav-item"><a class="nav-link active" href="Projets.html">Projets</a></li>
-                        <li><a class="nav-link disabled" tabindex="-1" aria-disabled="true">Contact</a></li>
+                        <li><a class="nav-link disabled" tabindex="-1" aria-disabled="true"><span title="En maintenance">Contact</span></a></li>
                     </ul>
                 </div>
             </div>
@@ -43,42 +34,117 @@
 
     <main class="container py-5">
         <section class="row g-4">
-            <!-- Projet 1 -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card project-card h-100 bg-secondary text-light">
-                    <img src="image_du_project" class="card-img-top" alt="Capture d'écran du projet bibliothèque">
-                    <div class="card-body">
-                        <h3 class="card-title">Gestion de bibliothèque</h3>
-                        <p class="card-text">Application web complète avec authentification utilisateur et dashboard administrateur.</p>
-                        
-                        <h4>Fonctionnalités :</h4>
-                        <ul>
-                            <li>Recherche avancée de livres</li>
-                            <li>Système d'emprunt avec rappels</li>
-                            <li>Statistiques en temps réel</li>
-                        </ul>
-
-                        <h4>Technologies :</h4>
-                        <div class="mb-3">
-                            <span class="badge bg-primary tech-badge">React</span>
-                            <span class="badge bg-success tech-badge">Node.js</span>
-                            <span class="badge bg-info tech-badge">MongoDB</span>
+            <div class="carousel-wrapper">
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="card-container active">
+                            <div class="card">
+                                <div class="side side--front">
+                                    <h1>Bibliothèque</h1>
+                                    <p class="card-text">Application web complète avec authentification utilisateur et dashboard administrateur.</p>
+                                    <h4>Fonctionnalités :</h4>
+                                <ul>
+                                    <li>Recherche avancée de livres</li>
+                                    <li>Système d'emprunt avec rappels</li>
+                                    <li>Statistiques en temps réel</li>
+                                </ul>
+                                <h4>Technologies :</h4>
+                                <div class="mb-3">
+                                    <span class="badge bg-primary tech-badge">HTML5</span>
+                                    <span class="badge bg-success tech-badge">CSS</span>
+                                    <span class="badge bg-info tech-badge">PHP</span>
+                                    <span class="badge bg-info tech-badge">MySQL</span>
+        
+                                </div>
+                                    <i class="bi bi-arrow-repeat"></i>
+                                </div>
+                                <div class="side side--back">
+                                    <h2>Back 1</h2>
+                                    <p>Informations détaillées</p>
+                                </div>
+                            </div>
                         </div>
-
-                        <div class="d-grid gap-2">
-                            <a href="https://github.com/votreprojet" class="btn btn-outline-light" target="_blank">
-                                <i class="bi bi-github"></i> Code source
-                            </a>
-                            <button class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#project1Modal">
-                                Voir les détails
-                            </button>
+        
+                        <div class="card-container">
+                            <div class="card">
+                                <div class="side side--front">
+                                    <h2>Application Web</h2>
+                                    <p class="card-text">Développement d'une application web afin d'améliorer la collaboration des 
+                                        équipes en entreprise pour la gestion de projets.</p>
+                                    <h4>Fonctionnalités :</h4>
+                                    <ul>
+                                        <li>Organisation des tâches et le suivi</li>
+                                        <li>Gestion des membres et des droits d’accès</li>
+                                        <li>Tableau de bord avec statistiques en temps réel</li>
+                                    </ul>
+                                    <h4>Technologies :</h4>
+                                <div class="mb-3">
+                                    <span class="badge bg-primary tech-badge">HTML5</span>
+                                    <span class="badge bg-success tech-badge">CSS</span>
+                                    <span class="badge bg-info tech-badge">PHP</span>
+                                    <span class="badge bg-info tech-badge">MySQL</span>
+        
+                                </div>
+                                    <i class="bi bi-arrow-repeat"></i>
+                                </div>
+                                <div class="side side--back">
+                                    <h2>Back 2</h2>
+                                    <p>Informations détaillées</p>
+                                </div>
+                            </div>
                         </div>
+        
+                        <div class="card-container">
+                            <div class="card">
+                                <div class="side side--front">
+                                    <h2>Réservation et gestion de billets de train</h2>
+                                    <p class="card-text">Conception d’une application console en C++ 
+                                        permettant aux utilisateurs de réserver et gérer leurs billets de train.</p>
+                                        <h4>Fonctionnalités :</h4>
+                                        <ul>
+                                            <li>Système de réservation et annulation</li>
+                                            <li>Gestion des utilisateurs et historique des réservations</li>
+                                            <li>Utilisation de la programmation orientée objet et gestion des fichiers</li> 
+                                        </ul>
+        
+                                    <i class="bi bi-arrow-repeat"></i>
+                                </div>
+                                <div class="side side--back">
+                                    <h2>Back 3</h2>
+                                    <p>Informations détaillées</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-container">
+                            <div class="card">
+                                <div class="side side--front">
+                                    <h2>Développement d’un jeu vidéo inspiré de Pac-Man</h2>
+                                    <p class="card-text">Création d’un jeu vidéo à l’aide de la bibliothèque Allegro, mettant en œuvre les mécaniques classiques du jeu Pac-Man.
+                                    </p>
+                                        <h4>Caractéristiques :</h4>
+                                        <ul>
+                                            <li>Déplacement des personnages et gestion des collisions</li>
+                                            <li>Graphismes et animations réalisés avec Allegro</li>
+                                        </ul>
+        
+                                    <i class="bi bi-arrow-repeat"></i>
+                                </div>
+                                <div class="side side--back">
+                                    <h2>Back 3</h2>
+                                    <p>Informations détaillées</p>
+                                </div>
+                            </div>
+                        </div>
+        
                     </div>
                 </div>
+                
+        
+                <button class="carousel-control prev"><i class="bi bi-chevron-left"></i></button>
+                <button class="carousel-control next"><i class="bi bi-chevron-right"></i></button>
+                
+                <div class="carousel-indicators"></div>
             </div>
-
-            <!-- Répéter le bloc ci-dessus pour d'autres projets -->
-            
         </section>
 
         <!-- Modals pour les détails des projets -->
@@ -98,16 +164,15 @@
         </div>
     </main>
 
-    <footer class="bg-dark text-center py-4">
-        <div class="container">
-            <p class="mb-0">&copy; 2025 Franck-Arsène KOUASSI | Tous droits réservés.</p>
-            <div class="mt-2">
-                <a href="https://www.linkedin.com/in/franck-kouassi-74a007305/" class="text-light mx-2"><i class="bi bi-linkedin"></i></a>
-                <a href="https://github.com/FRznck" class="text-light mx-2"><i class="bi bi-github"></i></a>
-            </div>
-        </div>
+    <footer id="contact">
+        <div class="container text-center">
+            <p>&copy; 2025 Franck-Arsène KOUASSI | Tous droits réservés.</p>
+            <a href="https://www.linkedin.com/in/franck-kouassi-74a007305/" class="text-light mx-2"><i class="bi bi-linkedin"></i></a>
+            <a href="https://github.com/FRznck" class="text-light mx-2"><i class="bi bi-github"></i></a>
+         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

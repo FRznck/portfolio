@@ -188,18 +188,7 @@ body {
         transform: translateY(0);
     }
 }
-/*
-.carousel {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .carousel-item img {
-    max-height: 500px;
-    object-fit: cover;
-  }
 
-  /* Ajouts CSS pour le carousel et animations */
 
 /* Animation de la vague */
 .wave {

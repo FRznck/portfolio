@@ -100,3 +100,64 @@ document.querySelectorAll('.carousel-item').forEach((item, index) => {
         });
     });
 });
+// carousel.js
+document.addEventListener('DOMContentLoaded', () => {
+    const carousel = document.querySelector('.carousel');
+    const cards = document.querySelectorAll('.card-container');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    const indicatorsContainer = document.querySelector('.carousel-indicators');
+    let currentIndex = 0;
+    
+    // Création des indicateurs
+    cards.forEach((_, index) => {
+        const indicator = document.createElement('span');
+        indicator.addEventListener('click', () => goToSlide(index));
+        indicatorsContainer.appendChild(indicator);
+    });
+    
+    const indicators = document.querySelectorAll('.carousel-indicators span');
+    
+    // Gestionnaire d'événements pour le flip des cartes
+    document.querySelectorAll('.card').forEach(card => {
+        card.addEventListener('click', function() {
+            this.classList.toggle('flipped');
+        });
+    });
+
+    // Navigation
+    function updateCarousel() {
+        const cardWidth = cards[0].offsetWidth + 30; // inclut l'espacement
+        carousel.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+        indicators.forEach(indicator => indicator.classList.remove('active'));
+        indicators[currentIndex].classList.add('active');
+    }
+
+    function goToSlide(index) {
+        currentIndex = Math.max(0, Math.min(index, cards.length - 1));
+        updateCarousel();
+    }
+
+    prevBtn.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+        }
+    });
+
+    nextBtn.addEventListener('click', () => {
+        if (currentIndex < cards.length - 1) {
+            currentIndex++;
+            updateCarousel();
+        }
+    });
+
+    // Responsivité
+    window.addEventListener('resize', () => {
+        currentIndex = 0;
+        updateCarousel();
+    });
+
+    // Initialisation
+    indicators[0].classList.add('active');
+});
