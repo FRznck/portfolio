@@ -161,6 +161,82 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
+/* Section Projets */
+.projects-section {
+    padding: 4rem 0;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.project-card {
+    background: var(--secondary-color);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.project-card.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.project-card .card-body {
+    padding: 1.5rem;
+}
+
+.project-card h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-description {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.technologies {
+    margin-bottom: 1rem;
+}
+
+.technologies .badge {
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 0.8rem;
+    background-color: var(--primary-color);
+    font-weight: 500;
+}
+
+.project-links .btn {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.project-links .btn:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.project-links .btn i {
+    margin-right: 0.5rem;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .home-content h1 {
@@ -251,4 +327,3 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
-
