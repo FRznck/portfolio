@@ -27,7 +27,8 @@
                         <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="index.html#skills">Compétences</a></li>
                         <li class="nav-item"><a class="nav-link active" href="project.html">Projets</a></li>
-                        <li><a class="nav-link disabled" tabindex="-1" aria-disabled="true"><span title="En maintenance">Contact</span></a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
+                       
 
                     </ul>
                 </div>
@@ -38,27 +39,61 @@
     <section class="projects-section py-5">
         <div class="container">
             <h2 class="section-title text-center mb-5 animate-on-scroll">Mes Projets</h2>
-            <h3 class="section-title text-center"><i class="fa-solid fa-person-digging"></i>(En travaux...)</h3>
             <div class="row g-4">
                 <!-- Projet 1 -->
                 <div class="col-md-6 col-lg-4">
                     <div class="project-card animate-on-scroll">
-                        <img src="img/projet1.jpg" class="card-img-top" alt="Aperçu du projet">
+                        <img src="img/img_projets/captech/1.jpg" class="card-img-top" alt="Aperçu du projet">
                         <div class="card-body">
-                            <h3>Nom du Projet 1</h3>
-                            <p class="project-description">Description détaillée du projet et de ses fonctionnalités principales.</p>
+                            <h3>CAPTECH</h3>
+                            <p class="project-description">L’objectif principal étant de développer une application web permettant aux équipes
+                                d'une entreprise de collaborer efficacement sur la gestion de leurs projets.</p>
                             <div class="technologies">
-                                <span class="badge bg-primary">HTML</span>
-                                <span class="badge bg-primary">CSS</span>
+                                <span class="badge bg-primary">HTML/CSS</span>
+                                <span class="badge bg-primary">PHP</span>
+                                <span class="badge bg-primary">MySQL/SQL</span>
+                                <span class="badge bg-primary">Boostrap</span>
                                 <span class="badge bg-primary">JavaScript</span>
                             </div>
                             <div class="project-links mt-3">
-                                <a href="#" class="btn btn-outline-primary me-2">
+                                <a href="#" class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#projectModal1">
                                     <i class="bi bi-eye-fill"></i> Voir le projet
                                 </a>
-                                <a href="#" class="btn btn-outline-secondary">
+                                <a href="https://github.com/FRznck/Projet-TECH" class="btn btn-outline-secondary">
                                     <i class="bi bi-github"></i> Code source
                                 </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="projectModal1" tabindex="-1" aria-labelledby="projectModalLabel1" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="projectModalLabel1">Projet CAPTECH</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                            <pre><p><strong>Fonctionnalités de l'application</strong> :
+• Gestion des projets (création, planification, suivi, etc.)
+• Gestion des tâches et des jalons
+• Collaboration en temps réel (commentaires, partage de fichiers, etc.)
+• Tableau de bord pour visualiser l’avancement des projets
+• Gestion des équipes et des rôles
+• Notifications et alertes
+                            </p>
+                            </pre>
+                            <img src="img/img_projets/captech/2.jpg" alt="Aperçu du projet" class="card-img-top" srcset="">
+                            <img src="img/img_projets/captech/3.jpg" alt="Aperçu du projet" class="card-img-top" srcset="">
+                            <img src="img/img_projets/captech/4.jpg" alt="Aperçu du projet" class="card-img-top" srcset="">
+                            <img src="img/img_projets/captech/5.jpg" alt="Aperçu du projet" class="card-img-top" srcset="">
+                            <img src="img/img_projets/captech/6.jpg" alt="Aperçu du projet" class="card-img-top" srcset="">
+                            <img src="img/img_projets/captech/7.jpg" alt="Aperçu du projet" class="card-img-top" srcset="">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
                             </div>
                         </div>
                     </div>
@@ -69,48 +104,106 @@
                     <div class="project-card animate-on-scroll">
                         <img src="img/projet2.jpg" class="card-img-top" alt="Aperçu du projet">
                         <div class="card-body">
-                            <h3>Nom du Projet 2</h3>
-                            <p class="project-description">Description détaillée du projet et de ses fonctionnalités principales.</p>
+                            <h3>Projet-TGV</h3>
+                            <p class="project-description">En cours d'ajout...</p>
+                            <p>vous pouvez visualiser le dépôt sur Github en attendant</p>
                             <div class="technologies">
                                 <span class="badge bg-primary">PHP</span>
                                 <span class="badge bg-primary">MySQL</span>
                                 <span class="badge bg-primary">Bootstrap</span>
                             </div>
                             <div class="project-links mt-3">
-                                <a href="#" class="btn btn-outline-primary me-2">
+                                <a href="#" class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#projectModal2">
                                     <i class="bi bi-eye-fill"></i> Voir le projet
                                 </a>
-                                <a href="#" class="btn btn-outline-secondary">
+                                <a href="https://github.com/FRznck/Projet-TGV" class="btn btn-outline-secondary">
                                     <i class="bi bi-github"></i> Code source
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
+                 <!-- Modal 2 -->
+                 <div class="modal fade" id="projectModal2" tabindex="-1" aria-labelledby="projectModalLabel2" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="projectModalLabel1">Projet CAPTECH</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                            <pre><p><strong>Fonctionnalités de l'application</strong> :
+• Gestion des projets (création, planification, suivi, etc.)
+• Gestion des tâches et des jalons
+• Collaboration en temps réel (commentaires, partage de fichiers, etc.)
+• Tableau de bord pour visualiser l’avancement des projets
+• Gestion des équipes et des rôles
+• Notifications et alertes
+                            </p>
+                            </pre>
+                            <img src="img/img_projets/captech/2.jpg" alt="Aperçu du projet" class="card-img-top" srcset="">
+                            <img src="img/img_projets/captech/3.jpg" alt="Aperçu du projet" class="card-img-top" srcset="">
+                            <img src="img/img_projets/captech/4.jpg" alt="Aperçu du projet" class="card-img-top" srcset="">
+                            <img src="img/img_projets/captech/5.jpg" alt="Aperçu du projet" class="card-img-top" srcset="">
+                            <img src="img/img_projets/captech/6.jpg" alt="Aperçu du projet" class="card-img-top" srcset="">
+                            <img src="img/img_projets/captech/7.jpg" alt="Aperçu du projet" class="card-img-top" srcset="">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
 
                 <!-- Projet 3 -->
                 <div class="col-md-6 col-lg-4">
                     <div class="project-card animate-on-scroll">
                         <img src="img/projet3.jpg" class="card-img-top" alt="Aperçu du projet">
                         <div class="card-body">
-                            <h3>Nom du Projet 3</h3>
-                            <p class="project-description">Description détaillée du projet et de ses fonctionnalités principales.</p>
+                            <h3>Mot mêlé</h3>
+                            <p class="project-description">En cours d'ajout...</p>
+                            <p>vous pouvez visualiser le dépôt sur Github en attendant</p>
                             <div class="technologies">
                                 <span class="badge bg-primary">HTML/CSS</span>
                                 <span class="badge bg-primary">PHP</span>
                                 <span class="badge bg-primary">MySQL</span>
                             </div>
                             <div class="project-links mt-3">
-                                <a href="#" class="btn btn-outline-primary me-2">
+                                <a href="#" class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#projectModal3">
                                     <i class="bi bi-eye-fill"></i> Voir le projet
                                 </a>
-                                <a href="#" class="btn btn-outline-secondary">
+                                <a href="https://github.com/FRznck/Mot-mele" class="btn btn-outline-secondary">
                                     <i class="bi bi-github"></i> Code source
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- Modal 3 -->
+<div class="modal fade" id="projectModal3" tabindex="-1" aria-labelledby="projectModalLabel3" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="projectModalLabel3">Nom du Projet 1</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Description détaillée du projet et de ses fonctionnalités principales.</p>
+                <div class="technologies">
+                    <span class="badge bg-primary">HTML</span>
+                    <span class="badge bg-primary">CSS</span>
+                    <span class="badge bg-primary">JavaScript</span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+            </div>
+        </div>
+    </div>
+</div>
+
             </div>
         </div>
     </section>
@@ -125,7 +218,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Animation on scroll
+      
         const observerOptions = {
             root: null,
             threshold: 0.1,

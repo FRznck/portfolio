@@ -34,35 +34,44 @@
 
     <section class="contact-section py-5">
         <div class="container">
+            <!-- à revoir l'affichage h2"contact" avec figma pour une meilleure animation -->
             <h2 class="section-title text-center mb-5 animate-on-scroll">Contact</h2>
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <div class="card bg-dark animate-on-scroll">
                         <div class="card-body">
-                            <form id="contactForm" class="needs-validation" novalidate>
+                            <?php
+                            if (isset($_GET['success'])) {
+                                echo '<p class="alert alert-success">Votre message a bien été envoyé !</p';
+                            }
+                            if (isset($_GET['error'])) {
+                                echo '<p class="alert alert-danger">Votre message n\'a pas pu être envoyé !</p';
+                            }
+                            ?>
+                            <form id="contactForm" class="needs-validation" novalidate action="traitement_contact.php" method="POST">
                                 <div class="mb-4">
                                     <label for="name" class="form-label">Nom</label>
-                                    <input type="text" class="form-control" id="name" required>
+                                    <input type="text" class="form-control" id="name" required name="name">
                                     <div class="invalid-feedback">
                                         Veuillez entrer votre nom
                                     </div>
                                 </div>
                                 <div class="mb-4">
                                     <label for="email" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="email" required>
+                                    <input type="email" class="form-control" id="email" required name="email">
                                     <div class="invalid-feedback">
                                         Veuillez entrer une adresse email valide
                                     </div>
                                 </div>
                                 <div class="mb-4">
                                     <label for="message" class="form-label">Message</label>
-                                    <textarea class="form-control" id="message" rows="5" required></textarea>
+                                    <textarea class="form-control" id="message" rows="5" required name="message"></textarea>
                                     <div class="invalid-feedback">
                                         Veuillez entrer votre message
                                     </div>
                                 </div>
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-primary px-5">Envoyer</button>
+                                    <button type="submit" class="btn btn-primary px-5" name="bout">Envoyer</button>
                                 </div>
                             </form>
                         </div>
@@ -72,7 +81,7 @@
         </div>
     </section>
 
-    <!-- Toast pour le message de confirmation -->
+
     <div class="toast-container position-fixed bottom-0 end-0 p-3">
         <div id="confirmationToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
@@ -101,22 +110,7 @@
             const form = document.getElementById('contactForm');
             const toast = new bootstrap.Toast(document.getElementById('confirmationToast'));
 
-            form.addEventListener('submit', function(event) {
-                event.preventDefault();
-                
-                if (!form.checkValidity()) {
-                    event.stopPropagation();
-                    form.classList.add('was-validated');
-                    return;
-                }
 
-                // Simuler l'envoi du formulaire
-                toast.show();
-                form.reset();
-                form.classList.remove('was-validated');
-            });
-
-            // Animation au défilement
             const animateOnScroll = document.querySelectorAll('.animate-on-scroll');
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
