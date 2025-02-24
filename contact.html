@@ -34,20 +34,11 @@
 
     <section class="contact-section py-5">
         <div class="container">
-            <!-- à revoir l'affichage h2"contact" avec figma pour une meilleure animation -->
             <h2 class="section-title text-center mb-5 animate-on-scroll">Contact</h2>
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <div class="card bg-dark animate-on-scroll">
                         <div class="card-body">
-                            <?php
-                            if (isset($_GET['success'])) {
-                                echo '<p class="alert alert-success">Votre message a bien été envoyé !</p';
-                            }
-                            if (isset($_GET['error'])) {
-                                echo '<p class="alert alert-danger">Votre message n\'a pas pu être envoyé !</p';
-                            }
-                            ?>
                             <form id="contactForm" class="needs-validation" novalidate action="traitement_contact.php" method="POST">
                                 <div class="mb-4">
                                     <label for="name" class="form-label">Nom</label>
@@ -81,7 +72,6 @@
         </div>
     </section>
 
-
     <div class="toast-container position-fixed bottom-0 end-0 p-3">
         <div id="confirmationToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
@@ -91,6 +81,16 @@
             </div>
             <div class="toast-body">
                 Votre message a été envoyé avec succès !
+            </div>
+        </div>
+        <div id="errorToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <i class="bi bi-x-circle-fill text-danger me-2"></i>
+                <strong class="me-auto">Erreur</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Votre message n'a pas pu être envoyé !
             </div>
         </div>
     </div>
@@ -103,13 +103,27 @@
         </div>
     </footer>
 
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const form = document.getElementById('contactForm');
-            const toast = new bootstrap.Toast(document.getElementById('confirmationToast'));
+            const successToast = new bootstrap.Toast(document.getElementById('confirmationToast'));
+            const errorToast = new bootstrap.Toast(document.getElementById('errorToast'));
 
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('success')) {
+                successToast.show();
+            } else if (urlParams.has('error')) {
+                errorToast.show();
+            }
+
+            form.addEventListener('submit', function(event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    form.classList.add('was-validated');
+                }
+            });
 
             const animateOnScroll = document.querySelectorAll('.animate-on-scroll');
             const observer = new IntersectionObserver((entries) => {

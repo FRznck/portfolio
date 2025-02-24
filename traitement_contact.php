@@ -24,12 +24,12 @@ if (
     $message = $_POST['message'];
 
    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        header('Location: contact.php?error=invalidemail');
+        header('Location: contact.html?error=invalidemail');
         exit;
     }
 
     if (empty($name) || empty($email) || empty($message)) {
-        header('Location: contact.php?error=emptyfields');
+        header('Location: contact.html?error=emptyfields');
         exit;
     }
 
@@ -56,11 +56,11 @@ if (
         $mail->Body    = "Nom: $name <br> Email: $email <br> Message: $message";
 
         $mail->send();
-        header('Location: contact.php?success');
+        header('Location: contact.html?success');
         exit;
     } catch (Exception $e) {
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-        header('Location: contact.php?error');
+        header('Location: contact.html?error');
         exit;
     }
 }
