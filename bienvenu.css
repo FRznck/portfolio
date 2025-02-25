@@ -1,0 +1,45 @@
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #333;
+}
+svg path {
+    fill: transparent;
+    stroke: #fff;
+    stroke-width: 0.1;
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+    animation: textAnimation 4s ease-in-out 1 forwards, fillAnimation 4s ease-in-out 1 forwards, transformAnimation 4s ease-in-out 1 forwards;
+}
+
+@keyframes textAnimation {
+    0% {
+        stroke-dashoffset: 50;
+    }
+    80% {
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fillAnimation {
+    0% {
+        fill: transparent;
+    }
+    100% {
+        fill: #fff;
+    }
+}
+
+@keyframes transformAnimation {
+    0% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
